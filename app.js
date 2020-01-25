@@ -4,12 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-const config = require("./config/config.json")[process.env["node_env"]];
+var config = require("./config/config.json")[process.env["node_env"]];
 var bodyParser = require("body-parser")
 var mysql = require('mysql');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
- 
+console.log(config)
+config= JSON.parse(JSON.stringify(config))
+console.log(config)
 var options = {
     host:config.mysql.hostname,
     port: config.mysql.port,
@@ -82,6 +84,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-console.log(config.port)
 app.listen(config.port, ()=>{ console.log("Node server running at ",config.port)});
 module.exports = app;
