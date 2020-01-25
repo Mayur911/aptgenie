@@ -1,7 +1,7 @@
 module.exports={
         port:8080,
         mysql:{
-            hostname:"34.67.103.42",
+            hostname:"3172.17.0.1",
             port:3306,
             database: "aptgenie",
             username: "aptgenie",
