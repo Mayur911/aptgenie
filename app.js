@@ -26,9 +26,8 @@ var options = {
   }
 };
  
-var connection = mysql.createConnection(options); // or mysql.createPool(options);
+var connection = mysql.createConnection(options);
 var sessionStore = new MySQLStore(options, connection);
-  // configure express
 var app = express()
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({limit: "40mb", extended: true}));
@@ -83,5 +82,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-app.listen(6060, ()=>{ console.log("Node server running at 6060")});
+console.log(config.port)
+app.listen(config.port, ()=>{ console.log("Node server running at ",config.port)});
 module.exports = app;

@@ -1,0 +1,22 @@
+{
+    "dev":{
+        "port":6080,
+        "mysql":{
+            "hostname":"34.67.103.42",
+            "port":3306,
+            "database": "aptgenie",
+            "username": "aptgenie",
+            "password": "apt@123"
+        }
+    },
+    "":{
+        "port":8080,
+        "mysql":{
+            "hostname":"34.67.103.42",
+            "port":3306,
+            "database": "aptgenie",
+            "username": "aptgenie",
+            "password": "apt@123"
+        }
+    }
+}
