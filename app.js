@@ -4,14 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
-var config = require("./config/config.json")[process.env["node_env"]];
+var config = require("./config/config.js");
 var bodyParser = require("body-parser")
 var mysql = require('mysql');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
-console.log(config)
-config= JSON.parse(JSON.stringify(config))
-console.log(config)
 var options = {
     host:config.mysql.hostname,
     port: config.mysql.port,
