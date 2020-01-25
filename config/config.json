@@ -9,7 +9,7 @@
             "password": "apt@123"
         }
     },
-    "":{
+    "prod":{
         "port":8080,
         "mysql":{
             "hostname":"34.67.103.42",
