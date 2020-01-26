@@ -1,10 +1,9 @@
 module.exports={
         port:8080,
         mysql:{
-            hostname:"172.17.0.1",
-            port:3306,
             database: "aptgenie",
             username: "aptgenie",
-            password: "apt@123"
+            password: "apt@123",
+            socketPath: `/cloudsql/aptgenie-266222:us-central1:aptgenie`
         }
 }

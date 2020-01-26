@@ -10,8 +10,7 @@ var mysql = require('mysql');
 var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var options = {
-    host:config.mysql.hostname,
-    port: config.mysql.port,
+    socketPath:config.mysql.socketPath,
     user: config.mysql.username,
     password: config.mysql.password,
     database:  config.mysql.database,

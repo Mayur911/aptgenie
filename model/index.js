@@ -3,10 +3,10 @@ var path = require("path");
 var Sequelize = require("sequelize");
 var config = require("../config/config.js");
 var config_sequelize = {
-    database: config.mysql.database,
-    username: config.mysql.username,
-    password: config.mysql.password,
-    host: config.mysql.hostname,
+  socketPath:config.mysql.socketPath,
+  user: config.mysql.username,
+  password: config.mysql.password,
+  database:  config.mysql.database,
     dialect: 'mysql',
     pool: {
         max: 5,
