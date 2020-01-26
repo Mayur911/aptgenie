@@ -15,7 +15,13 @@ var config_sequelize = {
     },
 }
 
-var sequelize = new Sequelize(config_sequelize.database, config_sequelize.username, config_sequelize.password, config_sequelize);
+var sequelize = new Sequelize(config_sequelize.database, config.mysql.username, config.mysql.password, {
+  dialect: 'mysql',
+  host: '/cloudsql/aptgenie-266222:us-central1:aptgenie',
+  timestamps: false,
+  dialectOptions: {
+    socketPath: '/cloudsql/aptgenie-266222:us-central1:aptgenie'
+}});
 var db = {};
 
 fs
