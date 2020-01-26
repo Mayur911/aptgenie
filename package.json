@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node app.js"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "dependencies": {
     "connect": "^3.7.0",
     "connect-session-sequelize": "^6.0.0",
