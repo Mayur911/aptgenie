@@ -4,7 +4,7 @@ module.exports={
             hostname:"35.222.33.241",
             port:3306,
             database: "aptgenie",
-            username: "aptgenie",
-            password: "apt@123"
+            username: "root",
+            password: "root"
         }
 }
